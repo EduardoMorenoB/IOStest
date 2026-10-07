@@ -9,6 +9,7 @@ targets:
     platform: iOS
     sources:
       - path: IOStest
+      - path: Shared/HelloAttributes.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.eduardomorenob.IOStest
@@ -24,6 +25,7 @@ targets:
     platform: iOS
     sources:
       - path: IOStestLiveActivity
+      - path: Shared/HelloAttributes.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.eduardomorenob.IOStest.LiveActivity

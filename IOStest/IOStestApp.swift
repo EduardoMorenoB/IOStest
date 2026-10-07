@@ -64,9 +64,3 @@ struct ContentView: View {
         activity = nil
     }
 }
-
-struct HelloAttributes: ActivityAttributes {
-    struct ContentState: Codable, Hashable {
-        var message: String
-    }
-}
