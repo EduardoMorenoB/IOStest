@@ -1,0 +1,33 @@
+name: IOStest
+options:
+  bundleIdPrefix: com.eduardomorenob
+  deploymentTarget:
+    iOS: "16.2"
+targets:
+  IOStest:
+    type: application
+    platform: iOS
+    sources:
+      - path: IOStest
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.eduardomorenob.IOStest
+        INFOPLIST_KEY_NSSupportsLiveActivities: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+    dependencies:
+      - target: IOStestLiveActivity
+        embed: true
+  IOStestLiveActivity:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: IOStestLiveActivity
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.eduardomorenob.IOStest.LiveActivity
+        INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: YES
